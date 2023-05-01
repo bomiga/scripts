@@ -1,10 +1,8 @@
 #!/bin/zsh
-# This script updates Homebrew, upgrades installed packages, and checks for macOS updates.
+# This script updates Homebrew and then upgrades installed packages, checks for macOS updates, and then updates Oh My Zsh and pip3. 
 
-echo "Updating brew ..."
 brew update
-echo "Upgrading brew packages ..."
-echo "Checking macOS updates ..."
+brew upgrade
 softwareupdate --list
 $ZSH/tools/upgrade.sh
 pip3 install --upgrade pip
